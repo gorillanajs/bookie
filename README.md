@@ -85,4 +85,7 @@ npx eas-cli@latest metadata:push
 Privacy policy and support pages are in `docs/`, served by GitHub Pages at
 https://gorillanajs.github.io/bookie/ (support) and https://gorillanajs.github.io/bookie/privacy.html.
 
-Still to add before submitting: `copyright` and review contact details (`apple.review`).
+`eas metadata:push` reads `store.config.js` (set in `eas.json`), which merges the public listing in
+`store.config.json` with App Review contact details from `store.review.local.json`. That file is
+gitignored because it holds a name and phone number; recreate it on a new machine with
+`{ "firstName", "lastName", "email", "phone" }`.
