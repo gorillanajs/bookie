@@ -8,7 +8,7 @@
     "scheme": "bookie",
     "userInterfaceStyle": "automatic",
     "ios": {
-      "supportsTablet": true,
+      "supportsTablet": false,
       "bundleIdentifier": "com.mgnssan.bookie",
       "config": {
         "usesNonExemptEncryption": false
@@ -44,6 +44,7 @@
           }
         }
       ],
+      "./plugins/withShareExtensionDeviceFamily",
       [
         "expo-share-intent",
         {
