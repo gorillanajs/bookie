@@ -1,7 +1,9 @@
 {
   "configVersion": 0,
   "apple": {
-    "categories": ["PRODUCTIVITY"],
+    "categories": [
+      "PRODUCTIVITY"
+    ],
     "info": {
       "en-US": {
         "title": "Bookie: Read Later",
@@ -19,7 +21,9 @@
           "url",
           "websites",
           "minimal"
-        ]
+        ],
+        "supportUrl": "https://gorillanajs.github.io/bookie/",
+        "privacyPolicyUrl": "https://gorillanajs.github.io/bookie/privacy.html"
       }
     },
     "review": {

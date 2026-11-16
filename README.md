@@ -82,5 +82,7 @@ and are uploaded with:
 npx eas-cli@latest metadata:push
 ```
 
-Still to add before submitting: `privacyPolicyUrl` and `supportUrl` (under `apple.info.en-US`),
-`copyright`, and review contact details (`apple.review`).
+Privacy policy and support pages are in `docs/`, served by GitHub Pages at
+https://gorillanajs.github.io/bookie/ (support) and https://gorillanajs.github.io/bookie/privacy.html.
+
+Still to add before submitting: `copyright` and review contact details (`apple.review`).
