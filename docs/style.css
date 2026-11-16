@@ -1,0 +1,98 @@
+/* Mirrors the app: warm neutrals, monospace, caps headings. */
+:root {
+  --canvas: #fafaf9;
+  --fg: #1c1917;
+  --muted: #78716c;
+  --line: #e7e5e4;
+  --dot: #e07a5f;
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --canvas: #0c0a09;
+    --fg: #f5f5f4;
+    --muted: #a8a29e;
+    --line: #292524;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--canvas);
+  color: var(--fg);
+  font: 15px/1.65 ui-monospace, 'JetBrains Mono', SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+main {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 56px 16px 80px;
+}
+
+h1,
+h2,
+h3,
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  line-height: 1.3;
+}
+
+h1 {
+  font-size: 26px;
+  margin: 4px 0 8px;
+}
+
+h2 {
+  font-size: 13px;
+  margin: 40px 0 8px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+
+h3 {
+  font-size: 12px;
+  margin: 24px 0 4px;
+  color: var(--muted);
+}
+
+.eyebrow {
+  font-size: 11px;
+  color: var(--muted);
+  margin: 0;
+}
+
+.eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background: var(--dot);
+  vertical-align: 1px;
+}
+
+.meta {
+  font-size: 12px;
+  color: var(--muted);
+  margin: 0 0 24px;
+}
+
+.lead {
+  font-size: 17px;
+}
+
+a {
+  color: inherit;
+  text-underline-offset: 3px;
+}
+
+ul {
+  padding-left: 20px;
+}

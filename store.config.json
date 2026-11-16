@@ -1,0 +1,30 @@
+{
+  "configVersion": 0,
+  "apple": {
+    "categories": ["PRODUCTIVITY"],
+    "info": {
+      "en-US": {
+        "title": "Bookie: Read Later",
+        "subtitle": "Save web pages for later",
+        "promoText": "Found something worth reading but no time right now? Share it to Bookie from Safari, file it in a collection, and come back to it when you're ready.",
+        "description": "Bookie is a calm, minimal place for the web pages you want to come back to.\n\nFound an article, a recipe or a tutorial you don't have time for right now? Share it to Bookie from Safari or any other app, pick a collection, and it's saved for later. When you're ready, tap it and the page opens right inside the app.\n\nSAVE FROM ANYWHERE\n• Share any web page to Bookie from Safari, Chrome or any app with a Share button\n• The link and page title are filled in for you. Just pick a collection and save\n• Or paste a link in yourself\n\nORGANIZE INTO COLLECTIONS\n• Group pages into collections like Recipes, Design or Read Later\n• Every collection gets its own color, so you can tell them apart at a glance\n• Pages you haven't filed yet wait in Unsorted\n• Long-press any page to rename it, move it to another collection or delete it\n\nFIND THINGS FAST\n• Sort your pages by newest, oldest, title (A–Z) or website\n\nQUIET BY DESIGN\n• A minimal, typographic interface that stays out of the way\n• Light and dark mode: follow your system setting or choose one\n\nPRIVATE BY DEFAULT\n• No account and no sign-up\n• Everything you save stays on your iPhone\n• No ads, no tracking, no data collected",
+        "keywords": [
+          "bookmark",
+          "bookmarks",
+          "links",
+          "reading list",
+          "articles",
+          "collections",
+          "organize",
+          "url",
+          "websites",
+          "minimal"
+        ]
+      }
+    },
+    "review": {
+      "demoRequired": false,
+      "notes": "Bookie needs no account or sign-in. All data is stored locally on the device; nothing is sent to a server.\n\nTo test the main feature (saving from another app):\n1. Open any web page in Safari.\n2. Tap Share and choose Bookie (it may be under More the first time).\n3. Bookie opens with the link and title filled in. Pick a collection and tap Save.\n\nOther features: tap + on the Saved tab to add a link manually; tap a saved page to open it in the in-app browser; long-press a page to edit, move or delete it; the Collections tab groups pages by topic; Settings has a light/dark appearance option."
+    }
+  }
+}

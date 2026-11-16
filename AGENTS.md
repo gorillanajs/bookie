@@ -39,3 +39,25 @@ Docs: https://docs.expo.dev/eas/index.md
 - If `ios/` and `android/` directories do not exist, they are generated (Continuous Native Generation). Never create or edit them by hand — configure native behavior in `app.json` and config plugins.
 - Expo Go only includes its bundled native modules. After adding a library with native code, the app needs a development build: `npx expo run:ios|android` locally, or `eas build --profile development`.
 - Prefer recommended Expo modules over third-party libraries, and check your available skills before adding dependencies. Docs: https://docs.expo.dev/versions/latest/index.md
+
+## Styling
+
+Style all components with **NativeWind (Tailwind CSS v3) utility classes** via `className`.
+Do not add `StyleSheet.create` or inline `style` objects for component styling.
+
+- Color tokens: `canvas`, `surface`, `fg`, `muted`, `faint`, `line`, `accent`, `on-accent`, `danger`
+  (e.g. `bg-canvas`, `text-muted`, `border-line`). They're CSS variables set by
+  `src/components/ThemeRoot.tsx` from `src/constants/theme.ts`, so light/dark switches
+  automatically. Don't use `dark:` variants for these.
+- Type: use `<Text variant="title|heading|body|caption|label" tone="…">` from
+  `src/components/ui/Text.tsx` (fonts `font-display`/`font-body`, sizes `text-title`…`text-label`).
+- Use `border-hairline` / `h-hairline` for thin borders and dividers, and `active:` for pressed
+  states on `Pressable`.
+- Safe areas: don't use NativeWind's `pt-safe`/`pb-safe` (they don't apply on device). Use
+  `useSafeAreaInsets()` and apply the inset inline, as in `src/components/ui/Screen.tsx`.
+- Join conditional classes with `cn()` from `src/lib/cn.ts`. There's no tailwind-merge, so don't rely
+  on a later class overriding an earlier conflicting one; add a prop instead (see `TextField`'s `bare`).
+- Allowed exceptions (APIs that take values, not classes): icon `color`/`tintColor`,
+  `placeholderTextColor`, navigator `screenOptions`, safe-area insets, and data-driven colors such as a collection's
+  color dot (`style={{ backgroundColor: collection.color }}`). Read raw colors with `useTheme()`.
+- Tailwind config: `tailwind.config.js`; restart Metro with `--clear` after changing it.
